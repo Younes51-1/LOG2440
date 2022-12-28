@@ -1,0 +1,21 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Site Web (prototype)",
+  "scripts": {
+    "clean": "rimraf ./node_modules",
+    "start": "lite-server .",
+    "e2e": "nightwatch --config ./nightwatch.json",
+    "lint": "eslint ./"
+  },
+  "author": "Nikolay Radoev",
+  "dependencies": {
+    "chromedriver": "105.0.0",
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "lite-server": "2.6.1",
+    "nightwatch": "2.3.4",
+    "rimraf": "3.0.2"
+  }
+}

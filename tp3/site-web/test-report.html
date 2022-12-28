@@ -1,0 +1,232 @@
+<html><head><meta charset="utf-8"/><title>Test Report</title><style type="text/css">html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+body {
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+#jesthtml-content {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+#title {
+  margin: 0;
+  flex-grow: 1;
+}
+#logo {
+  height: 4rem;
+}
+#timestamp {
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/** SUMMARY */
+#summary {
+  color: #333;
+  margin: 2rem 0;
+  display: flex;
+  font-family: monospace;
+  font-size: 1rem;
+}
+#summary > div {
+  margin-right: 2rem;
+  background: #eee;
+  padding: 1rem;
+  min-width: 15rem;
+}
+#summary > div:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 720px) {
+  #summary {
+    flex-direction: column;
+  }
+  #summary > div {
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+  #summary > div:first-child {
+    margin-top: 0;
+  }
+}
+
+.summary-total {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.summary-passed {
+  color: #4f8a10;
+  border-left: 0.4rem solid #4f8a10;
+  padding-left: 0.5rem;
+}
+.summary-failed,
+.summary-obsolete-snapshots {
+  color: #d8000c;
+  border-left: 0.4rem solid #d8000c;
+  padding-left: 0.5rem;
+}
+.summary-pending {
+  color: #9f6000;
+  border-left: 0.4rem solid #9f6000;
+  padding-left: 0.5rem;
+}
+.summary-empty {
+  color: #999;
+  border-left: 0.4rem solid #999;
+}
+
+.test-result {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+.test-result:last-child {
+  border: 0;
+}
+.test-result.passed {
+  background-color: #dff2bf;
+  color: #4f8a10;
+}
+.test-result.failed {
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.test-result.pending {
+  background-color: #ffdf61;
+  color: #9f6000;
+}
+
+.test-info {
+  display: flex;
+  justify-content: space-between;
+}
+.test-suitename {
+  width: 20%;
+  text-align: left;
+  font-weight: bold;
+  word-break: break-word;
+}
+.test-title {
+  width: 40%;
+  text-align: left;
+  font-style: italic;
+}
+.test-status {
+  width: 20%;
+  text-align: right;
+}
+.test-duration {
+  width: 10%;
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+.failureMessages {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  border-top: 1px dashed #d8000c;
+}
+.failureMessages.suiteFailure {
+  border-top: none;
+}
+.failureMsg {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.suite-container {
+  margin-bottom: 2rem;
+}
+.suite-info {
+  padding: 1rem;
+  background-color: #eee;
+  color: #777;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.suite-info .suite-path {
+  word-break: break-all;
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 1rem;
+}
+.suite-info .suite-time {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.75rem;
+}
+.suite-info .suite-time.warn {
+  background-color: #d8000c;
+  color: #fff;
+}
+
+/* CONSOLE LOGS */
+.suite-consolelog {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #efefef;
+}
+.suite-consolelog-header {
+  font-weight: bold;
+}
+.suite-consolelog-item {
+  padding: 0.5rem;
+}
+.suite-consolelog-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-consolelog-item-origin {
+  color: #777;
+  font-weight: bold;
+}
+.suite-consolelog-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+/* OBSOLETE SNAPSHOTS */
+.suite-obsolete-snapshots {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.suite-obsolete-snapshots-header {
+  font-weight: bold;
+}
+.suite-obsolete-snapshots-item {
+  padding: 0.5rem;
+}
+.suite-obsolete-snapshots-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-obsolete-snapshots-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+</style></head><body><div id="jesthtml-content"><header><h1 id="title">Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 2022-11-02 15:24:34</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (7)</div><div class="summary-passed">5 passed</div><div class="summary-failed">2 failed</div><div class="summary-pending summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (100)</div><div class="summary-passed">93 passed</div><div class="summary-failed">7 failed</div><div class="summary-pending summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\youne\OneDrive\Documents\GitHub\tp3-2061595_2068514\site-web\tests\jest\consts.test.js</div><div class="suite-time">1.216s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Consts tests</div><div class="test-title">Shortcuts should be valid</div><div class="test-status">passed</div><div class="test-duration">0.006s</div></div></div></div></div><div id="suite-2" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\youne\OneDrive\Documents\GitHub\tp3-2061595_2068514\site-web\tests\jest\storageManager.test.js</div><div class="suite-time">1.258s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">Storage manager should be created</div><div class="test-status">passed</div><div class="test-duration">0.007s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">loadAllData should correctly call loadDataFromFile for both files</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">loadDataFromFile should not reload data if data is already contained in localStorage</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">loadDataFromFile should load data if data is not already contained in localStorage</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">getData should not get localStorage's data given an invalid storageKey</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">getData should get localStorage's data given a valid storageKey</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">getItemById should call getData</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">getItemById should find item with specific id</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">addItem should correctly add an item to localStorage</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">replaceItem should correctly replace an item in localStorage with id checks</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">replaceItem should call getItem &amp; setItem</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">getIdFromName should call getData</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">getIdFromName should return a valid id given a valid elementName</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">getIdFromName should return -1 given an invalid elementName</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">StorageManager tests</div><div class="test-title">resetAllData should reset localStorage</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div></div></div><div id="suite-3" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\youne\OneDrive\Documents\GitHub\tp3-2061595_2068514\site-web\tests\jest\player.test.js</div><div class="suite-time">1.278s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">Player should be instanciated correctly</div><div class="test-status">passed</div><div class="test-duration">0.007s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">loadSongs should load songs in playlist</div><div class="test-status">passed</div><div class="test-duration">0.01s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">getSongFromIndex should not get song for an invalid index</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">getSongFromIndex should get song for a valid index</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playAudio should resume correctly given an index of -1</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playAudio should pause correctly given an index of -1</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playAudio should play audio for any given index except -1</div><div class="test-status">passed</div><div class="test-duration">0.011s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playPreviousSong should call playAudio</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playNextSong should call playAudio</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playPreviousSong &amp; playNextSong should return a random index between 0 and playlist's length if shuffled</div><div class="test-status">passed</div><div class="test-duration">0.017s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playPreviousSong should decrement currentIndex when shuffle is disabled</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playNextSong should increment currentIndex when shuffle is disabled</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playPreviousSong should return currentIndex % playlist's length if not shuffled</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">playNextSong should return currentIndex % playlist's length if not shuffled</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">audioSeek should correctly add stepper &amp; current time</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">muteToggle should return true if audio is muted</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">muteToggle should return false if audio is not muted</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">shuffleToggle should inverse shuffle state</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">scrubTime should correctly add delta stepper</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Player tests</div><div class="test-title">currentSong getter should correctly get the current song</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div></div></div><div id="suite-4" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\youne\OneDrive\Documents\GitHub\tp3-2061595_2068514\site-web\tests\jest\utils.test.js</div><div class="suite-time">1.28s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Utils tests</div><div class="test-title">formatTime should correctly format time</div><div class="test-status">passed</div><div class="test-duration">0.006s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Utils tests</div><div class="test-title">generateRandomID should generate a random ID of different lengths</div><div class="test-status">passed</div><div class="test-duration">0.069s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Utils tests</div><div class="test-title">generateRandomID should generate a random ID of length X by default</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Utils tests</div><div class="test-title">generateRandomID should generate a valid random ID</div><div class="test-status">passed</div><div class="test-duration">0.008s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Utils tests</div><div class="test-title">random should return a random int between min, and max</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Utils tests</div><div class="test-title">modulo should correctly return the modulo of any two numbers</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div></div></div><div id="suite-5" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\youne\OneDrive\Documents\GitHub\tp3-2061595_2068514\site-web\tests\jest\library.test.js</div><div class="suite-time">1.293s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests</div><div class="test-title">Library should be instanciated correctly</div><div class="test-status">passed</div><div class="test-duration">0.01s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests</div><div class="test-title">generateLists should call buildPlaylistItem and buildSongItem, and append children to containers</div><div class="test-status">passed</div><div class="test-duration">0.009s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests</div><div class="test-title">buildPlaylistItem should build playlist's item</div><div class="test-status">passed</div><div class="test-duration">0.01s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests</div><div class="test-title">buildSongItem should build song's item</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests</div><div class="test-title">buildSongItem should add a call to StorageManager.replaceItem on click event and change the classList</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests</div><div class="test-title">load should load window</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">clicking on the search button should prevent form submission and call search</div><div class="test-status">passed</div><div class="test-duration">0.012s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">clicking on the search button should call search with correct parameters</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">includesSubstring should return true if substring is in original string without exactMatch</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">includesSubstring should return false if substring is not in original string without exactMatch</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">includesSubstring should return true if substring is in original string with exactMatch</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">includesSubstring should return false if substring is not in original string with exactMatch</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">searchInFields should return true if atleast one field contains the string</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">searchInFields should return false if none of the fields contains the string</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">searchInFields should call includesSubstring</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">search should call searchInFields for playlists and songs and generateLists</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Library tests &gt; Search bar tests</div><div class="test-title">search should call generateLists with correct filtered lists</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div></div></div><div id="suite-6" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\youne\OneDrive\Documents\GitHub\tp3-2061595_2068514\site-web\tests\jest\playlist_editor.test.js</div><div class="suite-time">1.393s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">buildDataList should correctly build data list</div><div class="test-status">passed</div><div class="test-duration">0.021s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">updateImageDisplay should update image display</div><div class="test-status">passed</div><div class="test-duration">0.01s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">addItemSelect should call preventDefault for events</div><div class="test-status">passed</div><div class="test-duration">0.007s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">addItemSelect should correctly add item to container</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">addItemSelect should remove event target's parent node upon clicked</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">load should call StorageManager.loadAllData &amp; .buildDataList and buildDataList</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">load should correctly add updateImageDisplay as eventListener on change event to image input</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">load should correctly add addItemSelect as eventListener on click event to add song button</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">load should correctly call createPlaylist and preventDefault on submit event to the form</div><div class="test-status">failed</div><div class="test-duration">0.081s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">createPlaylist should correctly call getImageInput, StorageManager.getIdFromName &amp; StorageManager.addItem</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">getImageInput should not return an image for invalid inputs</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">getImageInput should return an image for a valid input</div><div class="test-status">passed</div><div class="test-duration">0.007s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist Editor tests</div><div class="test-title">getImageInput should call readAsDataURL on the first file of the input</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div></div></div><div id="suite-7" class="suite-container"><div class="suite-info"><div class="suite-path">C:\Users\youne\OneDrive\Documents\GitHub\tp3-2061595_2068514\site-web\tests\jest\playlist.test.js</div><div class="suite-time">1.43s</div></div><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">loadSongs should buildSongItem, and call StorageManager {getItemById, getData} &amp; Player.loadSongs for a valid playlist</div><div class="test-status">passed</div><div class="test-duration">0.022s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">buildSongItem should build song's item while calling playAudio &amp; setCurrentSongName upon click</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">buildSongItem should build different heart icons</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">playAudio should call setCurrentSongName &amp; Player.playAudio</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">playAudio should correctly add class lists if audio is paused</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">playAudio should correctly add class lists if audio is not paused</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">playPreviousSong should call setCurrentSongName &amp; Player.playPreviousSong</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">playNextSong should call setCurrentSongName &amp; Player.playNextSong</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">setCurrentSongName should set song name to #now-playing element</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">timelineUpdate should correctly update timeline</div><div class="test-status">failed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">audioSeek should call Player.audioSeek</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">muteToggle should call Player.muteToggle</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">muteToggle should correctly add class lists if player is muted</div><div class="test-status">failed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">muteToggle should correctly add class lists if player is not muted</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">shuffleToggle should call Player.shuffleToggle</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">shuffleToggle should correctly add class lists if shuffled</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">shuffleToggle should correctly add class lists if not shuffled</div><div class="test-status">failed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">scrubTime should call Player.scrubTime</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindEvents should correctly add event listeners to Player.audio</div><div class="test-status">failed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindEvents should correctly add event listener to timeline</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindEvents should correctly add event listener to play button</div><div class="test-status">failed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindEvents should correctly add event listener to mute button</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindEvents should correctly add event listener to previous button</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindEvents should correctly add event listener to next button</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindEvents should correctly add event listener to shuffle button</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindShortcuts should correctly bind shortcuts</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">bindShortcuts should correctly add keydown event listener</div><div class="test-status">failed</div><div class="test-duration">0.057s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Playlist tests</div><div class="test-title">load should correctly call bindEvents, bindShortcuts, laodSongs &amp; StorageManger.loadAllData</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div></div></div></div></body></html>
